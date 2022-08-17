@@ -1,32 +1,67 @@
-import Boy from '~/assets/img/2.png'
+
+import { useEffect } from "react"
+import "./index.scss"
 import silla from '~/assets/img/barbero-png.png'
-import Degradado2 from '~/assets/img/3.png'
-import Degradado3 from '~/assets/img/4.png'
 
 
-import './index.scss';
-
-const Services = () => {
-  return (
-    <div className="services-contain">
 
 
-      <div className="section1">
-      <div className="div-servicio">
-          <div className="new">
-              <p>Offer</p>
-            </div>
-            <div className="servicio2">
-          
-            {/* <img src={Degradado} alt="" /> */}
-            <div className="info-service">
-              <p>Name Corte</p>
-              <p><span>$000.00</span></p>
-            </div>
-            </div>
+const Shopp = () => {
+  let services =[
+    {
+      "name":"boy cut",
+      "price":75,
+    },
+    {
+      "name":"beard cut",
+      "price":150,
+    },
+    {
+      "name":"full cut",
+      "price":200,
+    },
+    {
+      "name":"fringe",
+      "price":50,
+    }
+
+  ]
+  useEffect(() => {
+    let data = "";
+
+    services.forEach(item => {
+      data += `
+      <main>
+          <div>
+            <p>${item.name}</p>
+            <p><span>$${item.price}</span></p>
           </div>
-      </div>
+      </main>
 
+      `;
+     
+
+    })
+    let section1 = document.querySelector("#section1");
+
+    if(section1 !== null) section1.innerHTML = data;
+
+
+  })
+
+
+
+
+
+
+  return (
+    <>
+      <div className="services-contain">
+     
+      <div className="section1" id='section1'>
+         
+      
+      </div>
 
 
       <div className="section2">
@@ -41,6 +76,7 @@ const Services = () => {
 
       </div>
     </div>
+    </>
   );
 }
-export default Services;
+export default Shopp;
