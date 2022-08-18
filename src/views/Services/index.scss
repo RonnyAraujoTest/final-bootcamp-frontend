@@ -17,7 +17,7 @@
 }
 .section1 main{
     font-size: 1.1rem;
-    border-radius: 10px;
+    border-radius: 2px;
     border-bottom: #d2d2d2 50px solid;
     box-shadow: black 0px 0px 5px 0px;
     margin: 30px;
@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
 
 }
 
@@ -52,7 +52,6 @@
 }
 .section2{
     width: 50%;
-    height: 100%;
     background-image: url(/src/assets/img/service-fondo.png);
     background-size:cover;
 }
@@ -93,15 +92,17 @@
 }
 .shadow{
     width: 100%;
-    background-color: #00000075;
-    height: 100%;
+    background-color: #0000009b;
     display: flex;
+    max-height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
 }
 .shadow h2{
-    font-size: 50px;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
     
 }
 .shadow img{
